@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="{{url}}/css/signUp.css">
+<link rel="stylesheet" href="{{url}}/css/bootstrap.min.css">
+
+<body>
+            <div class="form_wrapper">
+              <div class="form_container">
+                <div class="title_container">
+                  {{#if LoginError}}
+                  <div class="alert alert-danger" role="alert">{{LoginError}}</div>
+                  {{/if}}
+                  <h2>Login</h2>
+                </div>
+                <div class="row clearfix">
+                  <div class="w-100">
+                    <form action="/auth/login" method="post">
+                      <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                        <input type="email" name="email" placeholder="Email" required />
+                      </div>
+                      <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                        <input type="password" name="password1" placeholder="Password" required />
+                      </div>
+                      <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                        <input type="password" name="password2" placeholder="Re-type Password" required />
+                      </div>
+                      <div class="row clearfix">
+                        <div class="col_half">
+                        </div>
+                      </div>
+                      <input class="button" type="submit" value="Login" />
+                      <a href="/auth/signup" class="text-center"><h3>Ro'yhatdan o'tish</h3></a>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+</body>

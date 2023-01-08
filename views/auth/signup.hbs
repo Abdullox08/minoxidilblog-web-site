@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="{{url}}/css/signUp.css">
+<link rel="stylesheet" href="{{url}}/css/bootstrap.min.css">
+<body>
+  
+<div class="form_wrapper">
+    <div class="form_container">
+      <div class="title_container">
+        {{#if regError}}
+        <div class="alert alert-danger" role="alert">{{regError}}</div>
+        {{/if}}
+        <h2>Ro'yhatdan o'tish</h2>
+      </div>
+      <div class="row clearfix">
+        <div class="">
+          <form action="/auth/signup" method="post">
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+              <input type="password" name="password1" placeholder="Parol" required />
+            </div>
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+              <input type="password" name="password2" placeholder="Parolni takrorlang" required />
+            </div>
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+              <input type="text" name="phone" placeholder="Telefon raqamingiz" required />
+            </div>
+            <div class="row clearfix">
+              <div class="col_half">
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                  <input type="text" name="firstname" placeholder="Ismingiz" />
+                </div>
+              </div>
+              <div class="col_half">
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                  <input type="text" name="lastname" placeholder="Familyangiz" required />
+                </div>
+              </div>
+            </div>
+            <input class="button" type="submit" value="Ro'yhatdan o'tish" />
+            <a href="/auth/login" class="text-center"><h3>Login bilan Kirish</h3></a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
